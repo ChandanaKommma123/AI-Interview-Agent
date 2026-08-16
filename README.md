@@ -369,12 +369,6 @@ Variable	Description
 GEMINI_API_KEY	Google Gemini API key
 PORT	Backend server port
 
-Example:
-
-GEMINI_API_KEY=
-PORT=5000
-Do not expose API keys in frontend code or commit them to the repository.
-
 🎯 Hackathon Focus
 
 The core idea is to move away from generic interview questions.
