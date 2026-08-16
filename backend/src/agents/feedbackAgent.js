@@ -13,7 +13,7 @@ Candidate:
 ${candidateAnalysis.name}
 
 Role:
-${candidateAnalysis.role}
+${candidateAnalysis.jobRole}
 
 Experience:
 ${candidateAnalysis.yearsExperience}
@@ -54,9 +54,28 @@ Do not invent topics outside the supplied curriculum.
 
   const result = await generateText(prompt);
 
+  console.log("Raw feedback response:", result);
+
   try {
-    return JSON.parse(result);
+    const cleanedResult = result
+      .replace(/```json/g, "")
+      .replace(/```/g, "")
+      .trim();
+
+    return JSON.parse(cleanedResult);
+
   } catch (error) {
+
+    console.error(
+      "Feedback JSON parsing failed:",
+      error
+    );
+
+    console.error(
+      "Raw feedback:",
+      result
+    );
+
     return {
       summary: "Interview completed.",
       strengths: [],
