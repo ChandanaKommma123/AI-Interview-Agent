@@ -361,22 +361,17 @@ Follow-up OR Move to Next Curriculum Topic
 Repeat
        ↓
 Generate Final Feedback
+
 🔐 Environment Variables
-
 The application requires:
-
 Variable	Description
 GEMINI_API_KEY	Google Gemini API key
 PORT	Backend server port
 
 🎯 Hackathon Focus
-
 The core idea is to move away from generic interview questions.
-
 Instead of:
-
 Candidate → Generic Question Bank → Interview
-
 the system uses:
 
 Candidate Learning Journey
